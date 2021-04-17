@@ -16,14 +16,19 @@ class More extends StatelessWidget {
     return Column(
       children: [
         Container(
+            
             width: double.infinity,
             height: ContainerButSize,
             child: Row(
               children: [
                 Container(
                     margin: EdgeInsets.symmetric(horizontal: 8),
-                    child: CloseButton(
-                      onPressed: () {},
+                    child: IconButton(
+                      onPressed: () {
+                        Calculator();
+                      },
+                      icon: Icon(MyFlutterApp.cancel),
+                      iconSize: iconExSize,
                     )),
                 Container(
                     margin: EdgeInsets.symmetric(horizontal: 110),
@@ -51,15 +56,18 @@ class More extends StatelessWidget {
                 )),
                 Container(
                     margin: EdgeInsets.symmetric(horizontal: marginText),
+                 
                     child: Text(
                       'Settings',
                       style: TextStyle(
+                        
                         fontSize: textSize,
                       ),
                     )),
               ],
             ),
             decoration: const BoxDecoration(
+            
                 border: Border(
                     bottom: BorderSide(width: 2, color: Color(0xFF000000)))),
           ),
@@ -79,15 +87,18 @@ class More extends StatelessWidget {
                 )),
                 Container(
                     margin: EdgeInsets.symmetric(horizontal: marginText),
+                    
                     child: Text(
                       'Contact & Support',
                       style: TextStyle(
+             
                         fontSize: textSize,
                       ),
                     )),
               ],
             ),
             decoration: const BoxDecoration(
+              
                 border: Border(
                     bottom: BorderSide(width: 2, color: Color(0xFF000000)))),
           ),
@@ -107,15 +118,18 @@ class More extends StatelessWidget {
                 )),
                 Container(
                     margin: EdgeInsets.symmetric(horizontal: marginText),
+                   
                     child: Text(
                       'Feedback!',
                       style: TextStyle(
+                        
                         fontSize: textSize,
                       ),
                     )),
               ],
             ),
             decoration: const BoxDecoration(
+                
                 border: Border(
                     bottom: BorderSide(width: 2, color: Color(0xFF000000)))),
           ),
@@ -143,7 +157,8 @@ class More extends StatelessWidget {
                     )),
               ],
             ),
-            decoration: const BoxDecoration(),
+            decoration: const BoxDecoration(
+                ),
           ),
         ),
       ],

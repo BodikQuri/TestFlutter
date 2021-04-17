@@ -13,6 +13,8 @@ class Nav extends StatefulWidget {
 
 class _NavState extends State<Nav> {
   static const double sizeIconMenu = 35;
+  static const double TextSize = 30;
+  static const Color colorIcon = Colors.green;
 
   int _selectedIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
@@ -33,15 +35,19 @@ class _NavState extends State<Nav> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.green,
         title: Container(
           width: double.infinity,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-            Text('StitchCounter'), 
-
-            Icon(Icons.android), 
-            Text('Bot')],
+              Text('StitchCounter', style: TextStyle(fontSize: TextSize)),
+              Icon(
+                Icons.android,
+                size: TextSize,
+              ),
+              Text('Bot', style: TextStyle(fontSize: TextSize))
+            ],
           ),
         ),
       ),
@@ -56,36 +62,41 @@ class _NavState extends State<Nav> {
           BottomNavigationBarItem(
             icon: Icon(
               MyFlutterApp.help_circled,
-              size: sizeIconMenu,            
+              color: colorIcon,
+              size: sizeIconMenu,
             ),
             label: 'Tips',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               MyFlutterApp.clock,
+              color: colorIcon,
               size: sizeIconMenu,
-              ),
+            ),
             label: 'History',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               MyFlutterApp.camera,
-              size: sizeIconMenu*1.5,
+              color: colorIcon,
+              size: sizeIconMenu * 1.5,
             ),
             label: 'Count',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               MyFlutterApp.calc,
+              color: colorIcon,
               size: sizeIconMenu,
-              ),
+            ),
             label: 'Calculator',
           ),
           BottomNavigationBarItem(
             icon: Icon(
               MyFlutterApp.server,
+              color: colorIcon,
               size: sizeIconMenu,
-              ),
+            ),
             label: 'More',
           ),
         ],
